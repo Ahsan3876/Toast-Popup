@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Toast Popup</title>
+  </head>
+  <body>
+    <main>
+      <div class="main">
+        <select name="position" id="l-r">
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+        </select>
+        <select name="position" id="T-p">
+          <option value="Top">Top</option>
+          <option value="Bottom">Bottom</option>
+        </select>
+        <select name="position" id="Status">
+          <option value="Success">Success</option>
+          <option value="Error">Error</option>
+          <option value="Warning">Warning</option>
+          <option value="Info">Info</option>
+        </select>
+        <input
+          type="text"
+          value="This is a toast message!"
+          name=""
+          id="Text-input"
+          placeholder="Message"
+        />
+        <div class="range-container">
+          <label for="">Duration</label>
+          <input
+            type="range"
+            name="Range-input"
+            id="Range-input"
+            min="2"
+            max="10"
+          />
+        </div>
+        <button class="button">Show Toast</button>
+      </div>
+      <div class="messages">
+        <!-- <p class="LT" id="message-note">
+          ✗<span>This is a toast message!</span>
+          <i id="cross" class="fa-solid fa-xmark"></i>
+        </p>
+        <p class="LB" id="message-note">
+          ✓&nbsp;This is a toast message!
+          <i id="cross" class="fa-solid fa-xmark"></i>
+        </p>
+        <p class="RT" id="message-note">
+          ⚠&nbsp;This is a toast message!
+          <i id="cross" class="fa-solid fa-xmark"></i>
+        </p>
+        <p class="RB" id="message-note">
+          ⓘ&nbsp;This is a toast message!
+          <i id="cross" class="fa-solid fa-xmark"></i>
+        </p> -->
+      </div>
+    </main>
+  </body>
+</html>

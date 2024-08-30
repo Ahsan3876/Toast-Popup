@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px ;
+    margin-top: 50px;
+}
+#l-r,#T-p,
+#Status,
+#Text-input{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgb(0, 0, 0, 0.8) 0px 0px 5px ;
+}
+.button{
+padding: 10px 15px;
+border: none;
+border-radius: 5px;
+background-color: black;
+color: aliceblue;
+box-shadow: rgb(0, 0, 0, 0.8) 0px 0px 5px ;
+}
+#Text-input{
+    border: none;
+    box-shadow: rgb(0, 0, 0, 0.8) 0px 0px 5px ;
+}
+.button:hover{
+    color: blue;
+    /* cursor:  not-allowed */
+}
+.range-container{
+    display: flex;
+}
+.LT{
+    box-shadow:rgb(0, 0, 0, 0.8) 0px 0px 5px ; ;
+     max-width: 200px ; 
+    width: 100%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+}.messages{
+    position: absolute;
+    border-radius: 5px;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.container.goLeft{
+    animation: goLeft 0.1s forwards
+}
+.disabled.button{
+cursor: not-allowed;
+color: aliceblue;
+}
+.container span{
+cursor: pointer;
+}
+.container{
+    animation: fromLeft 0.1s;
+}
+.messages.right .container{
+    animation: fromRight 0.1s;
+}
+.messages.right .container.goRight{
+    animation: goRight 0.1s forwards
+}
+@keyframes fromLeft {
+   0% {
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes goLeft{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes fromRight {
+   0% {
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes goRight{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+/* c:hover{
+    cursor: pointer;
+} */
+.messages.right{
+    right: 1rem;
+    left: auto;
+}
+.messages.Bottom{
+    bottom: 1rem;
+    top: auto;
+}
+.container.Success::before{
+    content:'✓';
+}
+.container.Error::before{
+    content:'✗';
+}
+.container.Warning::before{
+    content:'⚠';
+}
+.container.Info::before{
+    content:'ⓘ';
+}
+.container.Success{
+    background-color: rgb(11, 189, 11);
+    color: whitesmoke;
+}
+.container.Error{
+    background-color: red;
+    color: whitesmoke;
+}
+.container.Info{
+    background-color: #968f86;
+    color: whitesmoke;
+}
+.container.Warning{
+    background-color: rgb(255, 174, 0);
+    color: whitesmoke;
+}
